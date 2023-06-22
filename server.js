@@ -145,6 +145,13 @@ and your server is running do the following:
 ----------------------*/
 //1. Find books with fewer than 500 but more than 200 pages
 
+let queryBooksWithPages = Book.find( { pages: { $gte: 200, $lte: 500 } } );
+
+queryBooksWithPages.exec().then(function (books) {
+  console.log(books);
+  console.log("==========");
+});
+
 //2. Find books whose rating is less than 5, and sort by the author's name
 
 //3. Find all the Fiction books, skip the first 2, and display only 3 of them
