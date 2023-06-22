@@ -12,6 +12,6 @@ const personSchema = new Schema ({
   kids: { type: Array, required: true},
 });
 
-const Person = mongoose.model("Person", personSchema);
+const Person = mongoose.model("people", personSchema);
 
 module.exports = Person;
